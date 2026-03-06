@@ -1,6 +1,6 @@
 import React from 'react';
 import { Award, ShieldCheck, BadgeCheck, Trophy, FileCheck, Target } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
+import { Card} from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { certifications } from '../data/mockData';
 
