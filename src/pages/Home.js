@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
-  Award,
-  Building2,
-  Calendar,
-  Gauge,
   MapPin,
   Star,
   CheckCircle2

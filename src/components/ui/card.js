@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '../../lib/utils';
 
+// Main Card Container
 const Card = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -13,6 +14,7 @@ const Card = React.forwardRef(({ className, ...props }, ref) => (
 ));
 Card.displayName = "Card";
 
+// Card Header
 const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -22,29 +24,41 @@ const CardHeader = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardHeader.displayName = "CardHeader";
 
-const CardTitle = React.forwardRef(({ className, ...props }, ref) => (
+// Card Title (FIXED for accessibility ✅)
+const CardTitle = React.forwardRef(({ className, children, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn("text-2xl font-semibold leading-none tracking-tight", className)}
     {...props}
-  />
+  >
+    {children || "Title"} {/* fallback added */}
+  </h3>
 ));
 CardTitle.displayName = "CardTitle";
 
-const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
+// Card Description
+const CardDescription = React.forwardRef(({ className, children, ...props }, ref) => (
   <p
     ref={ref}
     className={cn("text-sm text-gray-500 dark:text-gray-400", className)}
     {...props}
-  />
+  >
+    {children}
+  </p>
 ));
 CardDescription.displayName = "CardDescription";
 
+// Card Content
 const CardContent = React.forwardRef(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+  <div
+    ref={ref}
+    className={cn("p-6 pt-0", className)}
+    {...props}
+  />
 ));
 CardContent.displayName = "CardContent";
 
+// Card Footer
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -54,4 +68,11 @@ const CardFooter = React.forwardRef(({ className, ...props }, ref) => (
 ));
 CardFooter.displayName = "CardFooter";
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent
+};

@@ -7,8 +7,7 @@ import {
   Scan,
   Radio,
   Drill,
-  Anchor,
-  ChevronDown
+  Anchor
 } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
