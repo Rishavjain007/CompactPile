@@ -23,11 +23,11 @@ const About = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-white/20 text-white backdrop-blur-sm">About Us</Badge>
           <h1 className="text-5xl font-bold text-white mb-6">Our Story</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-red-100 max-w-3xl mx-auto">
             48 Years of Engineering Excellence and Innovation in Foundation Testing
           </p>
         </div>
@@ -77,17 +77,17 @@ const About = () => {
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Eye className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+            <Eye className="h-16 w-16 text-[#BA0014] mx-auto mb-4" />
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">Our Vision</h2>
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
             {visionPoints.map((point, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-lg transition-shadow border-l-4 border-blue-600"
+                className="p-6 hover:shadow-lg transition-shadow border-l-4 border-[#BA0014]"
               >
                 <div className="flex items-start space-x-4">
-                  <CheckCircle2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-[#BA0014] flex-shrink-0 mt-1" />
                   <p className="text-lg text-gray-700 dark:text-gray-300">{point}</p>
                 </div>
               </Card>
@@ -113,11 +113,11 @@ const About = () => {
               {milestones.map((milestone, index) => (
                 <div key={index} className="flex gap-6">
                   <div className="flex flex-col items-center">
-                    <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold flex-shrink-0">
+                    <div className="w-16 h-16 rounded-full bg-[#BA0014] text-white flex items-center justify-center font-bold flex-shrink-0">
                       {milestone.year}
                     </div>
                     {index < milestones.length - 1 && (
-                      <div className="w-0.5 h-full bg-blue-200 dark:bg-blue-900 mt-2"></div>
+                      <div className="w-0.5 h-full bg-[#BA0014] mt-2"></div>
                     )}
                   </div>
                   <Card className="flex-1 p-6 hover:shadow-lg transition-shadow">
@@ -134,7 +134,7 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-950 dark:to-gray-900">
+      <section className="py-20 bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-950 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -144,8 +144,8 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <Card className="p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <div className="w-16 h-16 bg-[#BA0014] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                 Quality Excellence
@@ -157,8 +157,8 @@ const About = () => {
             </Card>
 
             <Card className="p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <div className="w-16 h-16 bg-[#BA0014] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                 Innovation
@@ -170,8 +170,8 @@ const About = () => {
             </Card>
 
             <Card className="p-8 text-center hover:shadow-xl transition-all hover:-translate-y-2">
-              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CheckCircle2 className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <div className="w-16 h-16 bg-[#BA0014] rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle2 className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                 Integrity

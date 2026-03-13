@@ -25,17 +25,17 @@ const Home = () => {
             backgroundPosition: 'center'
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-gray-900/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#BA0014]/20 to-gray-900/80"></div>
         </div>
 
         <div className="container mx-auto px-4 z-10 text-center">
-          <Badge className="mb-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 text-sm">
+          <Badge className="mb-6 bg-[#BA0014] hover:bg-[#9E0011] text-white px-6 py-2 text-sm">
             NABL Accredited • ISO Certified • Since 1976
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Building Strong
             <br />
-            <span className="text-blue-400">Foundations</span> for the Future
+            <span className="text-red-100">Foundations</span> for the Future
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
             48 Years of Excellence in Pile Load Testing, NDT & Deep Foundation Solutions
@@ -44,7 +44,7 @@ const Home = () => {
             <Button
               asChild
               size="lg"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
+              className="bg-[#BA0014] hover:bg-[#9E0011] text-white px-8 py-6 text-lg"
             >
               <Link to="/contact">
                 Get a Quote <ArrowRight className="ml-2 h-5 w-5" />
@@ -69,9 +69,9 @@ const Home = () => {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-xl bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-800 dark:to-gray-900 hover:shadow-lg transition-shadow"
+                className="text-center p-6 rounded-xl bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-800 dark:to-gray-900 hover:shadow-lg transition-shadow"
               >
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-[#BA0014] mb-2">{stat.value}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
               </div>
             ))}
@@ -84,7 +84,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+              <Badge className="mb-4 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200">
                 About Us
               </Badge>
               <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
@@ -98,7 +98,7 @@ const Home = () => {
               </p>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-[#BA0014] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">
                       NABL Accredited Testing
@@ -109,7 +109,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-[#BA0014] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">
                       Advanced Technology
@@ -120,7 +120,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="h-6 w-6 text-[#BA0014] flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">
                       Expert Team
@@ -131,7 +131,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <Button asChild className="bg-blue-600 hover:bg-blue-700">
+              <Button asChild className="bg-[#BA0014] hover:bg-[#9E0011]">
                 <Link to="/about">
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -143,7 +143,7 @@ const Home = () => {
                 alt="Construction Site"
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-xl shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-[#BA0014] text-white p-6 rounded-xl shadow-xl">
                 <div className="text-3xl font-bold">48+</div>
                 <div className="text-sm">Years of Excellence</div>
               </div>
@@ -156,7 +156,7 @@ const Home = () => {
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+            <Badge className="mb-4 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200">
               Our Services
             </Badge>
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -181,7 +181,7 @@ const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <Badge className="mb-3 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200 text-xs">
+                  <Badge className="mb-3 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200 text-xs">
                     {service.category}
                   </Badge>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
@@ -196,7 +196,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild size="lg" className="bg-[#BA0014] hover:bg-[#9E0011]">
               <Link to="/services">
                 View All Services <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -209,7 +209,7 @@ const Home = () => {
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+            <Badge className="mb-4 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200">
               Our Projects
             </Badge>
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -235,7 +235,7 @@ const Home = () => {
                 </div>
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <Badge className="bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+                    <Badge className="bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200">
                       {project.category}
                     </Badge>
                     <span className="text-sm text-gray-500 dark:text-gray-400">
@@ -258,7 +258,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <Button asChild size="lg" className="bg-[#BA0014] hover:bg-[#9E0011]">
               <Link to="/projects">
                 View All Projects <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -271,7 +271,7 @@ const Home = () => {
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200">
+            <Badge className="mb-4 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200">
               Testimonials
             </Badge>
             <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
@@ -283,7 +283,7 @@ const Home = () => {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.id}
-                className="p-6 hover:shadow-lg transition-shadow border-0 bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-800 dark:to-gray-900"
+                className="p-6 hover:shadow-lg transition-shadow border-0 bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-800 dark:to-gray-900"
               >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -308,19 +308,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Get in touch with our experts for comprehensive foundation testing solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg"
+              className="bg-white text-[#BA0014] hover:bg-gray-100 px-8 py-6 text-lg"
             >
               <Link to="/contact">Contact Us Now</Link>
             </Button>

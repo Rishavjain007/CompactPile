@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { Card} from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
@@ -31,23 +31,67 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Mock form submission
-    setTimeout(() => {
-      toast({
-        title: 'Quote Request Submitted!',
-        description: 'Our team will contact you within 24 hours.'
-      });
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        location: '',
-        message: ''
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    // Format message for WhatsApp
+    const message = formatWhatsAppMessage(formData);
+    const whatsappNumber = '6376715272';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Show toast notification
+    toast({
+      title: 'Quote Request Sent to WhatsApp!',
+      description: 'Your request has been sent. Our team will respond shortly.'
+    });
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      service: '',
+      location: '',
+      message: ''
+    });
+    setIsSubmitting(false);
+  };
+
+  const formatWhatsAppMessage = (data) => {
+    const serviceMap = {
+      'static-load': 'Static Pile Load Test',
+      'lateral-load': 'Lateral Load Test',
+      'cyclic-load': 'Cyclic Load Test',
+      'hsdpt': 'High Strain Dynamic Test (HSDPT)',
+      'pit': 'Low Strain Integrity Test (PIT)',
+      'chsl': 'Cross-Hole Sonic Logging (CHSL)',
+      'piling': 'Piling Works',
+      'other': 'Other Services'
+    };
+
+    const serviceName = serviceMap[data.service] || data.service;
+    
+    return `*NEW QUOTE REQUEST - COMPACT PILE CONSTRUCTION*
+
+*📋 Client Details:*
+*Name:* ${data.name}
+*Email:* ${data.email}
+*Phone:* ${data.phone}
+*Company:* ${data.company || 'Not provided'}
+
+*🏗️ Project Details:*
+*Service Required:* ${serviceName}
+*Project Location:* ${data.location}
+
+*📝 Project Description:*
+${data.message || 'No additional details provided'}
+
+*⏰ Timestamp:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+*📱 Submitted via:* Website Contact Form
+
+---
+*Please contact the client at the earliest.*`;
   };
 
   const handleChange = (field, value) => {
@@ -81,11 +125,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-white/20 text-white backdrop-blur-sm">Contact Us</Badge>
           <h1 className="text-5xl font-bold text-white mb-6">Get in Touch</h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-red-100 max-w-3xl mx-auto">
             Let's discuss how we can help with your foundation testing needs
           </p>
         </div>
@@ -211,7 +255,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-blue-600 hover:bg-blue-700"
+                    className="w-full bg-[#BA0014] hover:bg-[#9E0011]"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
@@ -220,15 +264,19 @@ const Contact = () => {
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        Submitting...
+                        Sending to WhatsApp...
                       </span>
                     ) : (
                       <>
-                        <Send className="mr-2 h-5 w-5" />
-                        Submit Quote Request
+                        <MessageCircle className="mr-2 h-5 w-5" />
+                        Send....
                       </>
                     )}
                   </Button>
+                  
+                  <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-4">
+                    By submitting this form, you agree to our terms and privacy policy. Your request will be sent via WhatsApp for quick response.
+                  </p>
                 </form>
               </Card>
             </div>
@@ -247,26 +295,26 @@ const Contact = () => {
                     </h3>
                     <div className="space-y-3">
                       <div className="flex items-start space-x-3">
-                        <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-1" />
+                        <MapPin className="h-5 w-5 text-[#BA0014] flex-shrink-0 mt-1" />
                         <div className="text-gray-600 dark:text-gray-400">
                           <p>{office.address}</p>
                           <p>{office.city}</p>
                         </div>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <Phone className="h-5 w-5 text-[#BA0014] flex-shrink-0" />
                         <a
                           href={`tel:${office.phone}`}
-                          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
+                          className="text-gray-600 dark:text-gray-400 hover:text-[#BA0014] transition-colors"
                         >
                           {office.phone}
                         </a>
                       </div>
                       <div className="flex items-center space-x-3">
-                        <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                        <Mail className="h-5 w-5 text-[#BA0014] flex-shrink-0" />
                         <a
                           href={`mailto:${office.email}`}
-                          className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors break-all"
+                          className="text-gray-600 dark:text-gray-400 hover:text-[#BA0014] transition-colors break-all"
                         >
                           {office.email}
                         </a>
@@ -276,9 +324,9 @@ const Contact = () => {
                 ))}
 
                 {/* Business Hours */}
-                <Card className="p-6 bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                <Card className="p-6 bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-800 dark:to-gray-900">
                   <div className="flex items-center space-x-3 mb-4">
-                    <Clock className="h-6 w-6 text-blue-600" />
+                    <Clock className="h-6 w-6 text-[#BA0014]" />
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                       Business Hours
                     </h3>
@@ -297,6 +345,28 @@ const Contact = () => {
                       <span className="font-medium">Closed</span>
                     </div>
                   </div>
+                </Card>
+
+                {/* WhatsApp Direct Contact */}
+                <Card className="p-6 bg-gradient-to-br from-green-50 to-gray-50 dark:from-green-900/20 dark:to-gray-900 border border-green-200 dark:border-green-800">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <MessageCircle className="h-6 w-6 text-green-600" />
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                      WhatsApp Direct
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    For quick responses, connect with us directly on WhatsApp
+                  </p>
+                  <a
+                    href="https://wa.me/6376715272"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    <span>Chat on WhatsApp</span>
+                  </a>
                 </Card>
               </div>
             </div>
@@ -322,15 +392,15 @@ const Contact = () => {
       </section>
 
       {/* Emergency Contact */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="py-16 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Need Immediate Assistance?</h2>
-          <p className="text-xl text-blue-100 mb-6">
+          <p className="text-xl text-red-100 mb-6">
             Call our 24/7 emergency hotline for urgent project needs
           </p>
           <a
             href="tel:+919810208189"
-            className="inline-flex items-center space-x-3 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="inline-flex items-center space-x-3 bg-white text-[#BA0014] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             <Phone className="h-6 w-6" />
             <span className="text-xl">+91 9810208189</span>

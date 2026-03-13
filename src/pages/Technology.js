@@ -79,7 +79,7 @@ const Technology = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-white/20 text-white backdrop-blur-sm">
             Technology & Equipment
@@ -87,7 +87,7 @@ const Technology = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Cutting-Edge Testing Technology
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-red-100 max-w-3xl mx-auto">
             State-of-the-art equipment and innovative methods for accurate foundation testing
           </p>
         </div>
@@ -116,7 +116,7 @@ const Technology = () => {
                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                       {item.title}
                     </h3>
-                    <Badge className="bg-blue-600 text-white">{item.capacity}</Badge>
+                    <Badge className="bg-[#BA0014] text-white">{item.capacity}</Badge>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 mb-6">{item.description}</p>
                   <div className="space-y-2">
@@ -129,7 +129,7 @@ const Technology = () => {
                           key={idx}
                           className="flex items-center text-sm text-gray-600 dark:text-gray-400"
                         >
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                          <div className="w-2 h-2 bg-[#BA0014] rounded-full mr-2"></div>
                           {feature}
                         </div>
                       ))}
@@ -162,7 +162,7 @@ const Technology = () => {
                   key={index}
                   className="text-center p-8 hover:shadow-xl transition-all hover:-translate-y-2"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-[#BA0014] to-[#a00012] rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
@@ -186,8 +186,8 @@ const Technology = () => {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 dark:text-blue-400 font-bold text-xl">1</span>
+                  <div className="w-12 h-12 bg-[#BA0014]/10 dark:bg-[#BA0014]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#BA0014] dark:text-red-200 font-bold text-xl">1</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
@@ -200,8 +200,8 @@ const Technology = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 dark:text-blue-400 font-bold text-xl">2</span>
+                  <div className="w-12 h-12 bg-[#BA0014]/10 dark:bg-[#BA0014]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#BA0014] dark:text-red-200 font-bold text-xl">2</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
@@ -214,8 +214,8 @@ const Technology = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <span className="text-blue-600 dark:text-blue-400 font-bold text-xl">3</span>
+                  <div className="w-12 h-12 bg-[#BA0014]/10 dark:bg-[#BA0014]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#BA0014] dark:text-red-200 font-bold text-xl">3</span>
                   </div>
                   <div>
                     <h4 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white">
@@ -241,7 +241,7 @@ const Technology = () => {
       </section>
 
       {/* Quality Standards */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-gray-50 dark:from-gray-950 dark:to-gray-900">
+      <section className="py-20 bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-950 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -251,8 +251,8 @@ const Technology = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="p-8 border-2 border-blue-200 dark:border-blue-800">
-                <Shield className="h-12 w-12 text-blue-600 mb-4" />
+              <Card className="p-8 border-2 border-[#BA0014]/20 dark:border-[#BA0014]/30">
+                <Shield className="h-12 w-12 text-[#BA0014] mb-4" />
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                   NABL Accreditation
                 </h3>
@@ -261,8 +261,8 @@ const Technology = () => {
                   international standards (ISO/IEC 17025) and reliable, defensible results.
                 </p>
               </Card>
-              <Card className="p-8 border-2 border-blue-200 dark:border-blue-800">
-                <Settings className="h-12 w-12 text-blue-600 mb-4" />
+              <Card className="p-8 border-2 border-[#BA0014]/20 dark:border-[#BA0014]/30">
+                <Settings className="h-12 w-12 text-[#BA0014] mb-4" />
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                   ISO 9001:2015 Certified
                 </h3>

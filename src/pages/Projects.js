@@ -17,13 +17,13 @@ const Projects = () => {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="relative py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <Badge className="mb-6 bg-white/20 text-white backdrop-blur-sm">Our Projects</Badge>
           <h1 className="text-5xl font-bold text-white mb-6">
             Prestigious Projects Delivered
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-red-100 max-w-3xl mx-auto">
             Successfully completed major infrastructure projects across India
           </p>
         </div>
@@ -33,20 +33,20 @@ const Projects = () => {
       <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 rounded-lg bg-blue-50 dark:bg-gray-800">
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+            <div className="text-center p-6 rounded-lg bg-[#BA0014]/10 dark:bg-gray-800">
+              <div className="text-4xl font-bold text-[#BA0014] mb-2">500+</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-blue-50 dark:bg-gray-800">
-              <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
+            <div className="text-center p-6 rounded-lg bg-[#BA0014]/10 dark:bg-gray-800">
+              <div className="text-4xl font-bold text-[#BA0014] mb-2">20+</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">States Covered</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-blue-50 dark:bg-gray-800">
-              <div className="text-4xl font-bold text-blue-600 mb-2">100+</div>
+            <div className="text-center p-6 rounded-lg bg-[#BA0014]/10 dark:bg-gray-800">
+              <div className="text-4xl font-bold text-[#BA0014] mb-2">100+</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Active Clients</div>
             </div>
-            <div className="text-center p-6 rounded-lg bg-blue-50 dark:bg-gray-800">
-              <div className="text-4xl font-bold text-blue-600 mb-2">48</div>
+            <div className="text-center p-6 rounded-lg bg-[#BA0014]/10 dark:bg-gray-800">
+              <div className="text-4xl font-bold text-[#BA0014] mb-2">48</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
             </div>
           </div>
@@ -62,11 +62,11 @@ const Projects = () => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 variant={selectedCategory === category ? 'default' : 'outline'}
-                className={
+                className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-blue-600 hover:bg-blue-700'
-                    : 'hover:bg-gray-100 dark:hover:bg-gray-800'
-                }
+                    ? 'bg-[#BA0014] hover:bg-[#9E0011] text-white shadow-md'
+                    : 'border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#BA0014]/5 hover:border-[#BA0014] hover:text-[#BA0014] dark:hover:text-[#ffb3bb]'
+                }`}
               >
                 {category}
               </Button>
@@ -98,7 +98,7 @@ const Projects = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-blue-600 text-white">{project.category}</Badge>
+                      <Badge className="bg-[#BA0014] text-white">{project.category}</Badge>
                     </div>
                     <div className="absolute top-4 left-4">
                       <Badge variant="outline" className="bg-white/90 text-gray-700 border-0">
@@ -113,7 +113,7 @@ const Projects = () => {
                         {project.year}
                       </Badge>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-[#BA0014] transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
@@ -121,12 +121,12 @@ const Projects = () => {
                     </p>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center text-gray-600 dark:text-gray-400">
-                        <Building2 className="h-4 w-4 mr-2 text-blue-600" />
+                        <Building2 className="h-4 w-4 mr-2 text-[#BA0014]" />
                         <span className="font-medium">Client:</span>
                         <span className="ml-2">{project.client}</span>
                       </div>
                       <div className="flex items-center text-gray-600 dark:text-gray-400">
-                        <MapPin className="h-4 w-4 mr-2 text-blue-600" />
+                        <MapPin className="h-4 w-4 mr-2 text-[#BA0014]" />
                         <span>{project.location}</span>
                       </div>
                       {project.tests && (
@@ -172,9 +172,9 @@ const Projects = () => {
             ].map((client, index) => (
               <Card
                 key={index}
-                className="p-6 text-center hover:shadow-lg transition-shadow border-2 hover:border-blue-600"
+                className="p-6 text-center hover:shadow-lg transition-shadow border-2 hover:border-[#BA0014]"
               >
-                <Building2 className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+                <Building2 className="h-12 w-12 text-[#BA0014] mx-auto mb-3" />
                 <p className="font-semibold text-gray-900 dark:text-white">{client}</p>
               </Card>
             ))}
@@ -183,17 +183,17 @@ const Projects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
+      <section className="py-20 bg-gradient-to-r from-[#BA0014] to-[#a00012]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help with your foundation testing needs
           </p>
           <Button
             size="lg"
-            className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-6 text-lg"
+            className="bg-white text-[#BA0014] hover:bg-gray-100 px-8 py-6 text-lg"
           >
             Contact Us Today
           </Button>
