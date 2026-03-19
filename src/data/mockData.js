@@ -1,75 +1,173 @@
+// ===== LOCAL IMAGE IMPORTS =====
+import DynamicImg from "../assets/images/Picture1.jpg";
+import DynamicImg2 from "../assets/images/Picture2.jpg";
+import DynamicImg3 from "../assets/images/Picture3.jpg";
+import PITImg from "../assets/images/Picture5.jpg";
+import StaticImg from "../assets/images/Picture6.jpg";
+import StaticImg2 from "../assets/images/Picture10.jpg";
+import LateralImg from "../assets/images/Picture13.jpg";
+import RockAnchorImg from "../assets/images/Picture20.jpg";
+import ProjectImg1 from "../assets/images/Picture16.jpg";
+import ProjectImg2 from "../assets/images/Picture17.jpg";
+import ProjectImg3 from "../assets/images/Picture18.jpg";
+import ProjectImg4 from "../assets/images/Picture19.jpg";
+import ProjectImg5 from "../assets/images/Picture21.jpg";
+import ProjectImg6 from "../assets/images/Picture22.jpg";
+import StoneColumnImg from "../assets/images/Picture24.jpg";
+import PLTImg from "../assets/images/Picture27.jpg";
+import GroupImg1 from "../assets/images/Picture28.jpeg";
+import GroupImg2 from "../assets/images/Picture29.jpeg";
+
 export const services = [
   {
     id: 1,
-    title: "Static Pile Load Test",
+    title: "Static Vertical Load Test",
     category: "Load Tests",
-    description: "Conducted using Reaction Anchors, Kentledge, or Rock Anchors to determine ultimate load-carrying capacity up to 3000MT. NABL accredited and internationally recognized.",
+    description:
+      "Conducted using reaction anchors, kentledge, or structural reaction systems to determine the ultimate load-carrying capacity and settlement behavior of piles. Widely used for safe and reliable deep foundation design.",
     icon: "gauge",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Up to 3000MT capacity", "NABL accredited", "Real-time monitoring", "Detailed reports"]
+    image: StaticImg,
+    features: [
+      "Up to 3000 MT capacity",
+      "Settlement analysis",
+      "Detailed load-settlement curve",
+      "Foundation design validation"
+    ]
   },
   {
     id: 2,
     title: "Lateral Load Test",
     category: "Load Tests",
-    description: "Evaluates pile resistance against horizontal forces up to 500 Tons. Essential for structures subjected to wind, wave, seismic, or earth pressure loading.",
+    description:
+      "Evaluates pile resistance against horizontal forces and deflection behavior. Essential for structures subjected to wind, wave, seismic, traffic, and earth pressure loading.",
     icon: "move-horizontal",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Up to 500MT capacity", "Seismic analysis", "Deflection measurement", "Soil-structure interaction"]
+    image: LateralImg,
+    features: [
+      "Up to 500 MT capacity",
+      "Horizontal deflection study",
+      "Soil-structure interaction",
+      "Bridge & infrastructure suitability"
+    ]
   },
   {
     id: 3,
     title: "Cyclic Pile Load Test",
     category: "Load Tests",
-    description: "Assesses pile performance under repeated loading conditions up to 3000 Tons. Critical for infrastructure projects with dynamic loading requirements.",
+    description:
+      "Assesses pile performance under repeated loading and unloading cycles. Highly useful for dynamic, marine, and heavy infrastructure applications where fatigue and repeated loading are critical.",
     icon: "repeat",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Cyclic loading patterns", "Fatigue analysis", "Long-term performance", "Design validation"]
+    image: DynamicImg2,
+    features: [
+      "Repeated loading cycles",
+      "Fatigue behavior assessment",
+      "Performance under variable loads",
+      "Long-term design verification"
+    ]
   },
   {
     id: 4,
-    title: "High Strain Dynamic Test (HSDPT)",
+    title: "High Strain Dynamic Load Test",
     category: "NDT",
-    description: "Quick and economical method to evaluate pile capacity and integrity by applying hammer impact energy. PDA (Pile Driving Analyzer) testing available.",
+    description:
+      "A fast and economical method to estimate pile capacity and integrity by applying hammer impact energy. Suitable for dynamic evaluation and field verification using PDA systems.",
     icon: "activity",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Real-time analysis", "Capacity verification", "Integrity assessment", "Hammer performance"]
+    image: DynamicImg,
+    features: [
+      "Quick capacity estimation",
+      "Pile integrity evaluation",
+      "PDA compatible",
+      "Field-efficient testing"
+    ]
   },
   {
     id: 5,
-    title: "Low Strain Integrity Test (PIT)",
+    title: "Pile Integrity Test (PIT)",
     category: "NDT",
-    description: "Assesses pile continuity, integrity, and length. Detects cracks, voids, necking, soil inclusions, and changes in cross-section.",
+    description:
+      "A low strain non-destructive test used to assess pile continuity, length, and integrity. Useful for identifying cracks, necking, voids, inclusions, and section changes in piles.",
     icon: "scan",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Length verification", "Defect detection", "Cross-section analysis", "Quick assessment"]
+    image: PITImg,
+    features: [
+      "Pile continuity check",
+      "Defect identification",
+      "Length estimation",
+      "Quick site execution"
+    ]
   },
   {
     id: 6,
     title: "Cross-Hole Sonic Logging (CHSL)",
     category: "NDT",
-    description: "Employs ultrasonic pulses to verify homogeneity and quality of cast-in-situ concrete piles. Provides detailed 3D tomographic analysis.",
+    description:
+      "Uses ultrasonic pulse transmission between access tubes to evaluate the homogeneity and quality of cast-in-situ concrete piles. Effective for locating defects and weak zones.",
     icon: "radio",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["3D tomography", "Concrete quality", "Defect localization", "Full-length scanning"]
+    image: DynamicImg3,
+    features: [
+      "Concrete quality assessment",
+      "Defect zone identification",
+      "Full depth testing",
+      "Reliable ultrasonic analysis"
+    ]
   },
   {
     id: 7,
-    title: "Piling Works",
-    category: "Construction",
-    description: "Execution of bored cast-in-situ, driven, and micro piling works for diverse soil conditions. Complete foundation solutions from design to execution.",
-    icon: "drill",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Bored cast-in-situ", "Driven piles", "Micro piling", "Design & execution"]
+    title: "Plate Load Test (PLT)",
+    category: "Load Tests",
+    description:
+      "An in-situ field test conducted to determine the bearing capacity and settlement characteristics of soil at foundation level as per IS 1888. Useful for shallow foundation and pavement design.",
+    icon: "gauge",
+    image: PLTImg,
+    features: [
+      "As per IS 1888",
+      "Bearing capacity evaluation",
+      "Settlement characteristics",
+      "Subgrade modulus determination"
+    ]
   },
   {
     id: 8,
+    title: "Stone Column Load Test",
+    category: "Load Tests",
+    description:
+      "Field load test conducted to evaluate the load carrying capacity, stiffness, and settlement behavior of stone columns / granular piles used in ground improvement works.",
+    icon: "gauge",
+    image: StoneColumnImg,
+    features: [
+      "Ground improvement verification",
+      "Settlement performance",
+      "Column stiffness evaluation",
+      "Design validation"
+    ]
+  },
+  {
+    id: 9,
+    title: "Piling Works",
+    category: "Construction",
+    description:
+      "Execution of bored cast-in-situ piles, micro piles, and other foundation systems for varying soil conditions. End-to-end support from planning to field execution.",
+    icon: "drill",
+    image: StaticImg2,
+    features: [
+      "Bored cast-in-situ piling",
+      "Micro piling support",
+      "Site execution expertise",
+      "Deep foundation solutions"
+    ]
+  },
+  {
+    id: 10,
     title: "Rock Anchors & Soil Nailing",
     category: "Construction",
-    description: "Design and installation for slope stabilization, earth retention systems, and foundation support. Permanent and temporary anchoring solutions.",
+    description:
+      "Design and installation solutions for slope stabilization, excavation support, retaining systems, and ground reinforcement in infrastructure and geotechnical projects.",
     icon: "anchor",
-    image: "https://images.unsplash.com/photo-1581094794329-8114a89d3c2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    features: ["Slope stabilization", "Earth retention", "Foundation support", "Tensile testing"]
+    image: RockAnchorImg,
+    features: [
+      "Slope stabilization",
+      "Excavation support",
+      "Ground reinforcement",
+      "Retaining system solutions"
+    ]
   }
 ];
 
@@ -80,8 +178,9 @@ export const projects = [
     client: "Tata Projects Ltd.",
     location: "Jewar, Uttar Pradesh",
     category: "Airport",
-    description: "Conducting Low Strain Pile Integrity Tests (PIT) for India's upcoming international airport project. Over 2000 piles tested with comprehensive reporting.",
-    image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Pile Integrity Testing and allied foundation testing works executed for one of India’s largest upcoming airport infrastructure projects.",
+    image: ProjectImg1,
     year: "2024",
     status: "Ongoing",
     tests: ["PIT", "CHSL"]
@@ -92,11 +191,12 @@ export const projects = [
     client: "H.G. Infraprojects Ltd.",
     location: "Jamshedpur, Jharkhand",
     category: "Highways",
-    description: "Comprehensive testing including PIT, HSPDT, and Initial Static Lateral & Vertical Load Tests for 15km elevated corridor project.",
-    image: "https://images.unsplash.com/photo-1545324762-9a5f6d7d9e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Comprehensive testing including PIT, dynamic testing, and static lateral/vertical load testing for elevated corridor infrastructure.",
+    image: ProjectImg2,
     year: "2024",
     status: "Completed",
-    tests: ["PIT", "HSPDT", "Static Load"]
+    tests: ["PIT", "HSDT", "Static Load"]
   },
   {
     id: 3,
@@ -104,11 +204,12 @@ export const projects = [
     client: "Sam India Builtwell Pvt. Ltd.",
     location: "Agra, Uttar Pradesh",
     category: "Metro",
-    description: "Complete pile integrity testing suite including CHSL, PIT, HSPDT, and Lateral Tests for Phase 1 of Agra Metro.",
-    image: "https://images.unsplash.com/photo-1545324762-9a5f6d7d9e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Complete pile testing support including CHSL, PIT, dynamic testing, and lateral load testing for metro infrastructure works.",
+    image: ProjectImg3,
     year: "2024",
     status: "Ongoing",
-    tests: ["CHSL", "PIT", "HSPDT", "Lateral"]
+    tests: ["CHSL", "PIT", "Dynamic", "Lateral"]
   },
   {
     id: 4,
@@ -116,8 +217,9 @@ export const projects = [
     client: "G R Infraprojects Ltd.",
     location: "Maharashtra",
     category: "Highways",
-    description: "Six-laning project with comprehensive NDT and load testing under Hybrid Annuity Mode. Testing of 1500+ piles completed.",
-    image: "https://images.unsplash.com/photo-1545324762-9a5f6d7d9e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "NDT and load testing support for major six-laning highway infrastructure under Bharatmala project execution.",
+    image: ProjectImg4,
     year: "2023",
     status: "Completed",
     tests: ["NDT", "Load Tests"]
@@ -128,8 +230,9 @@ export const projects = [
     client: "PNC Infratech Ltd.",
     location: "Gurugram, Haryana",
     category: "Railways",
-    description: "Initial and Routine Vertical/Lateral Load Tests for railway infrastructure development including major bridges and viaducts.",
-    image: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Initial and routine vertical and lateral load tests for rail corridor and bridge foundation systems.",
+    image: ProjectImg5,
     year: "2023",
     status: "Completed",
     tests: ["Vertical Load", "Lateral Load"]
@@ -140,8 +243,9 @@ export const projects = [
     client: "G R Infra Projects Ltd.",
     location: "Patna, Bihar",
     category: "Highways",
-    description: "Installation of Sonic Tubes and comprehensive pile integrity testing using CHSL and PIT for riverfront expressway.",
-    image: "https://images.unsplash.com/photo-1545324762-9a5f6d7d9e3c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description:
+      "Installation of sonic tubes and comprehensive pile integrity testing support for expressway and riverfront infrastructure development.",
+    image: ProjectImg6,
     year: "2023",
     status: "Completed",
     tests: ["CHSL", "PIT"]
@@ -153,25 +257,28 @@ export const testimonials = [
     id: 1,
     name: "Rajeev Sharma",
     designation: "Project Manager, Tata Projects Ltd.",
-    content: "Compact Pile Construction has been instrumental in ensuring the foundation quality of our Noida Airport project. Their NABL accredited testing services provide us with complete confidence in our pile foundations.",
+    content:
+      "Compact Pile Construction has consistently delivered dependable and technically sound testing support for major infrastructure works. Their field execution and reporting quality are highly professional.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    image: GroupImg1
   },
   {
     id: 2,
     name: "Amit Kumar Singh",
     designation: "Chief Engineer, G R Infraprojects Ltd.",
-    content: "We have worked with CPC on multiple highway and metro projects across India. Their technical expertise, professional approach, and timely delivery are exceptional. Highly recommended.",
+    content:
+      "We have worked with CPC on multiple highway and transport infrastructure projects. Their testing quality, response time, and technical support have been excellent throughout.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    image: GroupImg2
   },
   {
     id: 3,
     name: "Vikram Mehta",
-    designation: "Site Director, PNC Infratech Ltd.",
-    content: "The professionalism and accuracy of their pile load testing services have made them our preferred partner for foundation testing. Their detailed reports and technical support are outstanding.",
+    designation: "Site Director, Infrastructure Project",
+    content:
+      "Their team demonstrates strong field expertise in pile testing and geotechnical support. Reports are detailed, practical, and highly useful for engineering decision-making.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+    image: GroupImg1
   }
 ];
 
@@ -183,7 +290,9 @@ export const teamMembers = [
     qualification: "B.E. Civil, M.B.M Engineering College, Jodhpur",
     experience: "37+ years",
     expertise: ["Foundation Design", "RCC Structures", "Project Management"],
-    description: "Expert in designing and installation of all types of foundations and R.C.C. structures. Pioneer in geotechnical testing in North India."
+    description:
+      "Expert in designing and installation of all types of foundations and RCC structures with extensive experience in geotechnical and infrastructure execution.",
+    image: GroupImg1
   },
   {
     id: 2,
@@ -192,7 +301,9 @@ export const teamMembers = [
     qualification: "B.E. Civil, Nagpur University",
     experience: "23+ years",
     expertise: ["Piling Works", "Quality Control", "Team Leadership"],
-    description: "Specialist in piling division with dedication to quality and innovation. Has executed over 500 projects across India."
+    description:
+      "Specialist in piling division with a strong focus on quality, field execution, and efficient project delivery across infrastructure works.",
+    image: GroupImg2
   },
   {
     id: 3,
@@ -200,17 +311,44 @@ export const teamMembers = [
     designation: "Technical Consultant",
     qualification: "M.Sc. Electronics, Delhi University",
     experience: "27+ years",
-    expertise: ["Instrumentation", "NDT Testing", "Waterproofing"],
-    description: "Expert in construction of residential, commercial buildings and waterproofing. Pioneered NDT techniques in foundation testing."
+    expertise: ["Instrumentation", "NDT Testing", "Testing Systems"],
+    description:
+      "Experienced in instrumentation, testing systems, and technical implementation of advanced non-destructive and load testing methods.",
+    image: GroupImg1
   },
   {
     id: 4,
-    name: "Arun Singh",
+    name: "Raj Karan Kashyap",
     designation: "Senior Engineer",
-    qualification: "B.E. Civil, SRM University",
-    experience: "10+ years",
-    expertise: ["PIT", "CHSL", "HSDPT", "Load Testing"],
-    description: "Specialist in all types of pile load testing and NDT methods. Has tested over 10,000 piles across major infrastructure projects."
+    qualification:
+      "B.Tech (Civil), Amity University | M.Tech (Highway & Transportation Engineering), NIT Patna",
+    experience: "Experienced",
+    expertise: ["Civil Engineering", "Highway Engineering", "Testing Operations"],
+    description:
+      "Handles engineering execution, site coordination, and technical support for testing operations and infrastructure-related field activities.",
+    image: GroupImg2
+  },
+  {
+    id: 5,
+    name: "Mangesh Kumar",
+    designation: "Pile Testing Engineer",
+    qualification: "Diploma (Civil), Government Polytechnic Sinduria Sonbhadra",
+    experience: "Experienced",
+    expertise: ["Pile Testing", "Field Execution", "Instrumentation"],
+    description:
+      "Supports pile testing execution, on-site measurements, equipment handling, and field coordination for foundation testing activities.",
+    image: GroupImg1
+  },
+  {
+    id: 6,
+    name: "Pankaj Kumar Singh",
+    designation: "Admin & Accounts",
+    qualification: "MBA, Sikkim Manipal University",
+    experience: "Experienced",
+    expertise: ["Administration", "Accounts", "Operations Support"],
+    description:
+      "Manages administrative coordination, financial records, and office operations to ensure smooth project and organizational support.",
+    image: GroupImg2
   }
 ];
 
@@ -218,23 +356,23 @@ export const certifications = [
   {
     id: 1,
     title: "NABL Accredited",
-    description: "Pile Load Tests (Static, Cyclic, Lateral, Pullout)",
+    description: "Pile Load Tests (Static, Cyclic, Lateral & Related Testing)",
     icon: "award",
-    number: "TC-XXXX"
+    number: "NABL Certified"
   },
   {
     id: 2,
     title: "NABL Accredited",
-    description: "Non-Destructive Testing (HSDPT, PIT, CHSL)",
+    description: "Non-Destructive Testing (Dynamic Test, PIT, CHSL)",
     icon: "shield-check",
-    number: "TC-XXXX"
+    number: "Testing Quality Assured"
   },
   {
     id: 3,
     title: "ISO 9001:2015",
     description: "Quality Management System Certified",
     icon: "badge-check",
-    number: "ISO-XXXX"
+    number: "ISO Certified"
   },
   {
     id: 4,
@@ -249,33 +387,51 @@ export const stats = [
   { label: "Projects Completed", value: "500+", icon: "building-2", suffix: "Projects" },
   { label: "Testing Capacity", value: "3000", icon: "gauge", suffix: "MT" },
   { label: "States Covered", value: "20+", icon: "map-pin", suffix: "States" },
-  { label: "Piles Tested", value: "50K+", icon: "bar-chart-2", suffix: "Piles" },
-  { label: "Happy Clients", value: "100+", icon: "users", suffix: "Clients" }
+  { label: "Foundation Tests", value: "50K+", icon: "bar-chart-2", suffix: "Tests" },
+  { label: "Trusted Clients", value: "100+", icon: "users", suffix: "Clients" }
 ];
 
 export const technologies = [
   {
     id: 1,
     name: "Pile Driving Analyzer (PDA)",
-    description: "High-strain dynamic testing equipment for pile capacity and integrity",
+    description:
+      "Advanced dynamic testing system used for high strain pile testing and pile capacity estimation.",
     category: "Testing Equipment"
   },
   {
     id: 2,
-    name: "PIT Collector",
-    description: "Low-strain integrity testing system for pile length and defect detection",
+    name: "PIT Collector System",
+    description:
+      "Low strain integrity testing equipment for assessing pile continuity, length, and structural integrity.",
     category: "Testing Equipment"
   },
   {
     id: 3,
-    name: "CHSL System",
-    description: "Cross-hole sonic logging equipment with 3D tomography capability",
+    name: "CHSL Instrumentation",
+    description:
+      "Ultrasonic logging equipment used for cross-hole sonic logging and concrete quality assessment.",
     category: "Testing Equipment"
   },
   {
     id: 4,
-    name: "Static Load Testing",
-    description: "Hydraulic jacks and reaction systems up to 3000MT capacity",
+    name: "Static Load Testing Setup",
+    description:
+      "Hydraulic jacks, reaction beams, kentledge systems, and precision gauges for static load testing.",
     category: "Testing Equipment"
+  },
+  {
+    id: 5,
+    name: "Plate Load Test Setup",
+    description:
+      "Field setup with hydraulic loading system and dial gauge instrumentation for soil bearing capacity evaluation.",
+    category: "Field Testing"
+  },
+  {
+    id: 6,
+    name: "Stone Column Load Test Setup",
+    description:
+      "Load testing arrangement for evaluating the load carrying behavior and settlement of improved ground systems.",
+    category: "Field Testing"
   }
 ];
