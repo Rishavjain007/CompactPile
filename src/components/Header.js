@@ -108,7 +108,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed top-20 left-4 right-4 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-4 z-40">
+        <div className="fixed top-20 left-4 right-4 bg-white dark:bg-gray-900 text-black dark:text-white rounded-2xl shadow-2xl p-4 z-40">
           {navLinks.map((link) => (
             <Link key={link.path} to={link.path} className="block py-3">
               {link.name}

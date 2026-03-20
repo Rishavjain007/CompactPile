@@ -168,50 +168,64 @@ const Technology = () => {
 
       {/* Equipment */}
       <section className="py-20 container mx-auto px-4">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Our Equipment Portfolio
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Practical field-tested systems used across foundation testing, load testing,
-            and geotechnical support projects.
+  <div className="text-center mb-14">
+    <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+      Our Equipment Portfolio
+    </h2>
+    <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+      Practical field-tested systems used across foundation testing, load testing,
+      and geotechnical support projects.
+    </p>
+  </div>
+
+  <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {equipment.map((item, index) => (
+      <Card
+        key={index}
+        className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white dark:bg-gray-900 flex flex-col h-full"
+      >
+        {/* Image */}
+        <div className="relative w-full h-[240px] sm:h-[250px] md:h-[260px] overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+          <img
+            src={item.image}
+            alt={item.title}
+            className="max-w-full max-h-full object-contain object-center group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+        </div>
+
+        {/* Content */}
+        <CardContent className="p-6 flex flex-col flex-grow">
+          <div className="flex items-start justify-between mb-3 gap-3">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white min-h-[56px]">
+              {item.title}
+            </h3>
+
+            <Badge className="bg-[#BA0014] text-white whitespace-nowrap">
+              {item.capacity}
+            </Badge>
+          </div>
+
+          <p className="text-gray-600 dark:text-gray-400 mb-5 leading-relaxed flex-grow">
+            {item.description}
           </p>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {equipment.map((item, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white dark:bg-gray-900"
-            >
-              <img src={item.image} alt={item.title} className="h-56 w-full object-cover" />
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between mb-3 gap-3">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {item.title}
-                  </h3>
-                  <Badge className="bg-[#BA0014] text-white whitespace-nowrap">
-                    {item.capacity}
-                  </Badge>
-                </div>
-
-                <p className="text-gray-600 dark:text-gray-400 mb-5 leading-relaxed">
-                  {item.description}
-                </p>
-
-                <div className="grid grid-cols-2 gap-2">
-                  {item.features.map((f, i) => (
-                    <div key={i} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                      <div className="w-2 h-2 bg-[#BA0014] rounded-full mr-2 shrink-0"></div>
-                      {f}
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
+          <div className="grid grid-cols-2 gap-2">
+            {item.features.map((f, i) => (
+              <div
+                key={i}
+                className="flex items-center text-sm text-gray-600 dark:text-gray-400"
+              >
+                <div className="w-2 h-2 bg-[#BA0014] rounded-full mr-2 shrink-0"></div>
+                <span className="leading-relaxed">{f}</span>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</section>
 
       {/* Technology Advantages */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">

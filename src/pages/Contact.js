@@ -120,21 +120,27 @@ Please connect with the client at the earliest.`;
       address: '2nd Floor, D-17, Lajpat Nagar III',
       city: 'New Delhi – 110024',
       phone: '+91 9810208189',
-      email: 'compactpile@yahoo.co.in'
+      email: 'compactpile@yahoo.co.in',
+      mapLink:
+        'https://www.google.com/maps/search/?api=1&query=2nd+Floor,+D-17,+Lajpat+Nagar+III,+New+Delhi+110024'
     },
     {
       title: 'Registered Office',
       address: 'A-0/34, S.S.G.T. Road',
       city: 'Ghaziabad (U.P.) – 201001',
       phone: '011-41716543',
-      email: 'compactpile@yahoo.co.in'
+      email: 'compactpile@yahoo.co.in',
+      mapLink:
+        'https://www.google.com/maps/search/?api=1&query=A-0/34,+S.S.G.T.+Road,+Ghaziabad,+U.P.+201001'
     },
     {
       title: 'Regional Office',
       address: '117, Neppalli Village, Kankipadu Mandal',
       city: 'Krishna, Andhra Pradesh – 521245',
       phone: '+91 9810040857',
-      email: 'compactpile@yahoo.co.in'
+      email: 'compactpile@yahoo.co.in',
+      mapLink:
+        'https://www.google.com/maps/search/?api=1&query=117,+Neppalli+Village,+Kankipadu+Mandal,+Krishna,+Andhra+Pradesh+521245'
     }
   ];
 
@@ -364,24 +370,32 @@ Please connect with the client at the earliest.`;
                     </div>
 
                     <div className="space-y-4">
-                      <div className="flex items-start space-x-3">
+                      {/* Clickable Location */}
+                      <a
+                        href={office.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-start space-x-3 group"
+                      >
                         <MapPin className="h-5 w-5 text-[#BA0014] flex-shrink-0 mt-1" />
-                        <div className="text-gray-600 dark:text-gray-400">
+                        <div className="text-gray-600 dark:text-gray-400 group-hover:text-[#BA0014] transition-colors">
                           <p>{office.address}</p>
                           <p>{office.city}</p>
                         </div>
-                      </div>
+                      </a>
 
+                      {/* Clickable Phone */}
                       <div className="flex items-center space-x-3">
                         <Phone className="h-5 w-5 text-[#BA0014] flex-shrink-0" />
                         <a
-                          href={`tel:${office.phone}`}
+                          href={`tel:${office.phone.replace(/\s+/g, '')}`}
                           className="text-gray-600 dark:text-gray-400 hover:text-[#BA0014] transition-colors"
                         >
                           {office.phone}
                         </a>
                       </div>
 
+                      {/* Clickable Email */}
                       <div className="flex items-center space-x-3">
                         <Mail className="h-5 w-5 text-[#BA0014] flex-shrink-0" />
                         <a
@@ -523,11 +537,11 @@ Please connect with the client at the earliest.`;
           </p>
 
           <a
-            href="tel:+919810208189"
+            href="tel:+919810040857"
             className="inline-flex items-center space-x-3 bg-white text-[#BA0014] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg"
           >
             <Phone className="h-6 w-6" />
-            <span className="text-xl">+91 9810208189</span>
+            <span className="text-xl">+91 98100 40857</span>
             <ArrowRight className="h-5 w-5" />
           </a>
         </div>

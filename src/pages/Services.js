@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Gauge,
   MoveHorizontal,
@@ -8,85 +8,85 @@ import {
   Scan,
   Radio,
   Drill,
-  Anchor
-} from 'lucide-react';
+  Anchor,
+} from "lucide-react";
 
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
+import { Card, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger
-} from '../components/ui/accordion';
+  AccordionTrigger,
+} from "../components/ui/accordion";
 
-import { services } from '../data/mockData';
+import { services } from "../data/mockData";
 
 // ===== LOCAL IMAGES (adjust extension if needed) =====
-import DynamicImg from '../assets/images/Picture1.jpg';
-import PITImg from '../assets/images/Picture5.jpg';
-import StaticImg from '../assets/images/Picture6.jpg';
-import LateralImg from '../assets/images/Picture13.jpg';
-import RockAnchorImg from '../assets/images/Picture20.jpg';
-import StoneColumnImg from '../assets/images/Picture24.jpg';
-import PLTImg from '../assets/images/Picture27.jpg';
+import DynamicImg from "../assets/images/Picture1.jpg";
+import PITImg from "../assets/images/Picture5.jpg";
+import StaticImg from "../assets/images/Picture6.jpg";
+import LateralImg from "../assets/images/Picture13.jpg";
+import RockAnchorImg from "../assets/images/Picture20.jpg";
+import StoneColumnImg from "../assets/images/Picture24.jpg";
+import PLTImg from "../assets/images/Picture27.jpg";
 
 const iconMap = {
   gauge: Gauge,
-  'move-horizontal': MoveHorizontal,
+  "move-horizontal": MoveHorizontal,
   repeat: Repeat,
   activity: Activity,
   scan: Scan,
   radio: Radio,
   drill: Drill,
-  anchor: Anchor
+  anchor: Anchor,
 };
 
 const detailCards = [
   {
-    title: 'Static Vertical Load Test',
+    title: "Static Vertical Load Test",
     image: StaticImg,
-    desc: 'Determines ultimate pile capacity and settlement behavior using reaction systems, hydraulic jacks, and precision gauges.'
+    desc: "Determines ultimate pile capacity and settlement behavior using reaction systems, hydraulic jacks, and precision gauges.",
   },
   {
-    title: 'Pile Integrity Test (PIT)',
+    title: "Pile Integrity Test (PIT)",
     image: PITImg,
-    desc: 'Low strain non-destructive testing to assess continuity, defects, and pile soundness.'
+    desc: "Low strain non-destructive testing to assess continuity, defects, and pile soundness.",
   },
   {
-    title: 'High Strain Dynamic Test',
+    title: "High Strain Dynamic Test",
     image: DynamicImg,
-    desc: 'Quick field testing method for capacity estimation and integrity assessment using impact energy.'
+    desc: "Quick field testing method for capacity estimation and integrity assessment using impact energy.",
   },
   {
-    title: 'Lateral Load Test',
+    title: "Lateral Load Test",
     image: LateralImg,
-    desc: 'Evaluates pile resistance against horizontal forces and measures deflection behavior.'
+    desc: "Evaluates pile resistance against horizontal forces and measures deflection behavior.",
   },
   {
-    title: 'Plate Load Test (PLT)',
+    title: "Plate Load Test (PLT)",
     image: PLTImg,
-    desc: 'Used to determine soil bearing capacity and settlement characteristics as per IS 1888.'
+    desc: "Used to determine soil bearing capacity and settlement characteristics as per IS 1888.",
   },
   {
-    title: 'Stone Column Load Test',
+    title: "Stone Column Load Test",
     image: StoneColumnImg,
-    desc: 'Verifies load capacity and settlement behavior of improved ground using stone columns.'
+    desc: "Verifies load capacity and settlement behavior of improved ground using stone columns.",
   },
   {
-    title: 'Rock Anchors & Soil Nailing',
+    title: "Rock Anchors & Soil Nailing",
     image: RockAnchorImg,
-    desc: 'Ground reinforcement solution for slope stabilization, excavation support, and retention systems.'
-  }
+    desc: "Ground reinforcement solution for slope stabilization, excavation support, and retention systems.",
+  },
 ];
 
 const Services = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const categories = ['All', 'Load Tests', 'NDT', 'Construction'];
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const categories = ["All", "Load Tests", "NDT", "Construction"];
 
   const filteredServices =
-    selectedCategory === 'All'
+    selectedCategory === "All"
       ? services
       : services.filter((service) => service.category === selectedCategory);
 
@@ -113,8 +113,8 @@ const Services = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
-            Specialized in pile load testing, NDT, Plate Load Test (PLT), Stone Column Load Test,
-            piling works, and ground engineering services.
+            Specialized in pile load testing, NDT, Plate Load Test (PLT), Stone
+            Column Load Test, piling works, and ground engineering services.
           </p>
         </div>
       </section>
@@ -127,11 +127,11 @@ const Services = () => {
               <Button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                variant={selectedCategory === category ? 'default' : 'outline'}
+                variant={selectedCategory === category ? "default" : "outline"}
                 className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-[#BA0014] hover:bg-[#9E0011] text-white shadow-md'
-                    : 'border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#BA0014]/5 hover:border-[#BA0014] hover:text-[#BA0014] dark:hover:text-[#ffb3bb]'
+                    ? "bg-[#BA0014] hover:bg-[#9E0011] text-white shadow-md"
+                    : "border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#BA0014]/5 hover:border-[#BA0014] hover:text-[#BA0014] dark:hover:text-[#ffb3bb]"
                 }`}
               >
                 {category}
@@ -144,24 +144,26 @@ const Services = () => {
       {/* Services Grid (cards use mockData images) */}
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => {
               const IconComponent = iconMap[service.icon] || Gauge;
+
               return (
                 <Card
                   key={service.id}
-                  className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+                  className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full"
                 >
-                  <div className="h-52 overflow-hidden relative">
+                  {/* Image */}
+                  <div className="relative w-full h-[220px] sm:h-[230px] md:h-[240px] overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className="max-w-full max-h-full object-contain object-center group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
 
-                  <CardContent className="p-6">
+                  {/* Content */}
+                  <CardContent className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-4">
                       <Badge className="bg-[#BA0014]/10 text-[#BA0014] border border-[#BA0014]/20 dark:bg-[#BA0014]/20 dark:text-red-200">
                         {service.category}
@@ -172,11 +174,11 @@ const Services = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-[#BA0014] transition-colors duration-300">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-[#BA0014] transition-colors duration-300 min-h-[56px]">
                       {service.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed flex-grow">
                       {service.description}
                     </p>
 
@@ -188,7 +190,7 @@ const Services = () => {
                             className="flex items-center text-xs text-gray-500 dark:text-gray-400"
                           >
                             <div className="w-1.5 h-1.5 bg-[#BA0014] rounded-full mr-2 shrink-0"></div>
-                            {feature}
+                            <span className="leading-relaxed">{feature}</span>
                           </div>
                         ))}
                       </div>
@@ -203,42 +205,48 @@ const Services = () => {
 
       {/* Real Site Work Gallery */}
       <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-              Real Site Work & Testing Operations
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Field-tested engineering solutions backed by practical execution and on-site expertise
-            </p>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-14">
+      <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+        Real Site Work & Testing Operations
+      </h2>
+      <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+        Field-tested engineering solutions backed by practical execution
+        and on-site expertise
+      </p>
+    </div>
+
+    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {detailCards.map((item, index) => (
+        <Card
+          key={index}
+          className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full"
+        >
+          {/* Image */}
+          <div className="relative w-full h-[240px] sm:h-[250px] md:h-[260px] overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="max-w-full max-h-full object-contain object-center group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {detailCards.map((item, index) => (
-              <Card
-                key={index}
-                className="overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-              >
-                <div className="h-60 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    {item.desc}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* Content */}
+          <CardContent className="p-6 flex flex-col flex-grow">
+            <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white min-h-[56px]">
+              {item.title}
+            </h3>
+
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed flex-grow">
+              {item.desc}
+            </p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Detailed Services Accordion */}
       <section className="py-20 bg-gray-50 dark:bg-gray-950">
@@ -248,7 +256,8 @@ const Services = () => {
               Detailed Testing Services
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Learn more about our testing capabilities, field methodologies, and engineering applications
+              Learn more about our testing capabilities, field methodologies,
+              and engineering applications
             </p>
           </div>
 
@@ -262,40 +271,55 @@ const Services = () => {
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Static Vertical Load Test</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Static Vertical Load Test
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Determines ultimate pile capacity and settlement behavior using hydraulic jacks,
-                    reaction systems, and precision measurement.
+                    Determines ultimate pile capacity and settlement behavior
+                    using hydraulic jacks, reaction systems, and precision
+                    measurement.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Lateral Load Test</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Lateral Load Test
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Evaluates pile response under horizontal forces for bridge, transport, and structural applications.
+                    Evaluates pile response under horizontal forces for bridge,
+                    transport, and structural applications.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Cyclic Load Test</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Cyclic Load Test
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Used to assess repeated load behavior and long-term performance under variable loading.
+                    Used to assess repeated load behavior and long-term
+                    performance under variable loading.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Plate Load Test (PLT)</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Plate Load Test (PLT)
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Conducted as per IS 1888 to determine soil bearing capacity, settlement characteristics,
-                    and subgrade modulus for shallow foundations and pavements.
+                    Conducted as per IS 1888 to determine soil bearing capacity,
+                    settlement characteristics, and subgrade modulus for shallow
+                    foundations and pavements.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Stone Column Load Test</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Stone Column Load Test
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Evaluates the stiffness, load carrying capacity, and settlement behavior of improved ground
-                    using stone columns / granular piles.
+                    Evaluates the stiffness, load carrying capacity, and
+                    settlement behavior of improved ground using stone columns /
+                    granular piles.
                   </p>
                 </div>
               </AccordionContent>
@@ -310,23 +334,32 @@ const Services = () => {
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">High Strain Dynamic Test</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    High Strain Dynamic Test
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    A quick field method for capacity estimation and pile integrity assessment using impact energy.
+                    A quick field method for capacity estimation and pile
+                    integrity assessment using impact energy.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Pile Integrity Test (PIT)</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Pile Integrity Test (PIT)
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Low strain integrity testing for pile continuity, defect detection, and structural soundness.
+                    Low strain integrity testing for pile continuity, defect
+                    detection, and structural soundness.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Cross-Hole Sonic Logging (CHSL)</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Cross-Hole Sonic Logging (CHSL)
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Ultrasonic testing used to assess internal concrete quality and identify anomalies in cast-in-situ piles.
+                    Ultrasonic testing used to assess internal concrete quality
+                    and identify anomalies in cast-in-situ piles.
                   </p>
                 </div>
               </AccordionContent>
@@ -341,16 +374,22 @@ const Services = () => {
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Piling Works</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Piling Works
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Execution of bored cast-in-situ piles, micro piles, and related deep foundation systems.
+                    Execution of bored cast-in-situ piles, micro piles, and
+                    related deep foundation systems.
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">Rock Anchors & Soil Nailing</h4>
+                  <h4 className="font-semibold mb-2 text-gray-900 dark:text-white">
+                    Rock Anchors & Soil Nailing
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Geotechnical reinforcement solutions for slope stabilization, excavation support, and retaining systems.
+                    Geotechnical reinforcement solutions for slope
+                    stabilization, excavation support, and retaining systems.
                   </p>
                 </div>
               </AccordionContent>
@@ -367,8 +406,8 @@ const Services = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-red-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Connect with us for foundation testing, pile load tests, NDT services, plate load test,
-            and ground engineering support.
+            Connect with us for foundation testing, pile load tests, NDT
+            services, plate load test, and ground engineering support.
           </p>
 
           <Link to="/contact">

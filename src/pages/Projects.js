@@ -1,20 +1,28 @@
-import { useState } from 'react';
-import { MapPin, Calendar, Building2, ArrowRight, BriefcaseBusiness, BadgeCheck, Gauge } from 'lucide-react';
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { Link } from 'react-router-dom';
-import { projects } from '../data/mockData';
+import { useState } from "react";
+import {
+  MapPin,
+  Calendar,
+  Building2,
+  ArrowRight,
+  BriefcaseBusiness,
+  BadgeCheck,
+  Gauge,
+} from "lucide-react";
+import { Card, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Link } from "react-router-dom";
+import { projects } from "../data/mockData";
 
 // ===== LOCAL HERO IMAGE =====
-import HeroImg from '../assets/images/Picture18.jpg';
+import HeroImg from "../assets/images/Picture18.jpg";
 
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const categories = ['All', 'Highways', 'Metro', 'Railways', 'Airport'];
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const categories = ["All", "Highways", "Metro", "Railways", "Airport"];
 
   const filteredProjects =
-    selectedCategory === 'All'
+    selectedCategory === "All"
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
 
@@ -39,8 +47,9 @@ const Projects = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
-            Supporting major infrastructure developments across India with dependable
-            foundation testing, geotechnical services, and field expertise.
+            Supporting major infrastructure developments across India with
+            dependable foundation testing, geotechnical services, and field
+            expertise.
           </p>
         </div>
       </section>
@@ -50,17 +59,21 @@ const Projects = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { value: '500+', label: 'Projects Completed' },
-              { value: '20+', label: 'States Covered' },
-              { value: '100+', label: 'Trusted Clients' },
-              { value: '48+', label: 'Years Experience' }
+              { value: "500+", label: "Projects Completed" },
+              { value: "20+", label: "States Covered" },
+              { value: "100+", label: "Trusted Clients" },
+              { value: "48+", label: "Years Experience" },
             ].map((item, index) => (
               <div
                 key={index}
                 className="text-center p-6 rounded-2xl bg-gradient-to-br from-[#BA0014]/10 to-gray-50 dark:from-gray-800 dark:to-gray-900 hover:shadow-lg transition-all duration-300 hover:-translate-y-2"
               >
-                <div className="text-4xl font-bold text-[#BA0014] mb-2">{item.value}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">{item.label}</div>
+                <div className="text-4xl font-bold text-[#BA0014] mb-2">
+                  {item.value}
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  {item.label}
+                </div>
               </div>
             ))}
           </div>
@@ -75,11 +88,11 @@ const Projects = () => {
               <Button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                variant={selectedCategory === category ? 'default' : 'outline'}
+                variant={selectedCategory === category ? "default" : "outline"}
                 className={`rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-[#BA0014] hover:bg-[#9E0011] text-white shadow-md'
-                    : 'border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#BA0014]/5 hover:border-[#BA0014] hover:text-[#BA0014] dark:hover:text-[#ffb3bb]'
+                    ? "bg-[#BA0014] hover:bg-[#9E0011] text-white shadow-md"
+                    : "border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-[#BA0014]/5 hover:border-[#BA0014] hover:text-[#BA0014] dark:hover:text-[#ffb3bb]"
                 }`}
               >
                 {category}
@@ -99,31 +112,42 @@ const Projects = () => {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
                 <Card
                   key={project.id}
-                  className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                  className="group overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full"
                 >
-                  <div className="h-64 overflow-hidden relative">
+                  {/* Image */}
+                  <div className="relative w-full h-[260px] sm:h-[270px] md:h-[280px] overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="max-w-full max-h-full object-contain object-center group-hover:scale-105 transition-transform duration-500"
                     />
 
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"></div>
+
+                    {/* Badges */}
                     <div className="absolute top-4 right-4">
-                      <Badge className="bg-[#BA0014] text-white">{project.category}</Badge>
+                      <Badge className="bg-[#BA0014] text-white">
+                        {project.category}
+                      </Badge>
                     </div>
 
                     <div className="absolute top-4 left-4">
-                      <Badge variant="outline" className="bg-white/90 text-gray-700 border-0">
+                      <Badge
+                        variant="outline"
+                        className="bg-white/90 text-gray-700 border-0"
+                      >
                         {project.status}
                       </Badge>
                     </div>
                   </div>
 
-                  <CardContent className="p-6">
+                  {/* Content */}
+                  <CardContent className="p-6 flex flex-col flex-grow">
                     <div className="flex items-center justify-between mb-3">
                       <Badge variant="outline" className="text-xs">
                         <Calendar className="h-3 w-3 mr-1" />
@@ -131,11 +155,11 @@ const Projects = () => {
                       </Badge>
                     </div>
 
-                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-[#BA0014] transition-colors">
+                    <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-[#BA0014] transition-colors min-h-[56px]">
                       {project.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed flex-grow">
                       {project.description}
                     </p>
 
@@ -191,19 +215,19 @@ const Projects = () => {
             {[
               {
                 icon: BriefcaseBusiness,
-                title: 'Diverse Infrastructure Experience',
-                desc: 'Experience across airports, highways, metros, railways, industrial and foundation works.'
+                title: "Diverse Infrastructure Experience",
+                desc: "Experience across airports, highways, metros, railways, industrial and foundation works.",
               },
               {
                 icon: BadgeCheck,
-                title: 'Reliable Execution',
-                desc: 'Strong field coordination, testing discipline, and dependable support for complex projects.'
+                title: "Reliable Execution",
+                desc: "Strong field coordination, testing discipline, and dependable support for complex projects.",
               },
               {
                 icon: Gauge,
-                title: 'Technical Capability',
-                desc: 'Advanced testing systems and practical expertise for critical engineering requirements.'
-              }
+                title: "Technical Capability",
+                desc: "Advanced testing systems and practical expertise for critical engineering requirements.",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
@@ -244,21 +268,23 @@ const Projects = () => {
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              'Tata Projects Ltd.',
-              'G R Infraprojects Ltd.',
-              'PNC Infratech Ltd.',
-              'Sam India Builtwell Pvt. Ltd.',
-              'H.G. Infraprojects Ltd.',
-              'KEC International',
-              'ARSS Infrastructure',
-              'IOCL'
+              "Tata Projects Ltd.",
+              "G R Infraprojects Ltd.",
+              "PNC Infratech Ltd.",
+              "Sam India Builtwell Pvt. Ltd.",
+              "H.G. Infraprojects Ltd.",
+              "KEC International",
+              "ARSS Infrastructure",
+              "IOCL",
             ].map((client, index) => (
               <Card
                 key={index}
                 className="p-6 text-center rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:border-[#BA0014]"
               >
                 <Building2 className="h-12 w-12 text-[#BA0014] mx-auto mb-3" />
-                <p className="font-semibold text-gray-900 dark:text-white">{client}</p>
+                <p className="font-semibold text-gray-900 dark:text-white">
+                  {client}
+                </p>
               </Card>
             ))}
           </div>
@@ -273,8 +299,8 @@ const Projects = () => {
           </h2>
 
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let’s discuss how CompactPile can support your foundation testing and
-            geotechnical engineering requirements.
+            Let’s discuss how CompactPile can support your foundation testing
+            and geotechnical engineering requirements.
           </p>
 
           <Button

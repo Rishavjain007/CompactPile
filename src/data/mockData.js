@@ -1,22 +1,26 @@
 // ===== LOCAL IMAGE IMPORTS =====
 import DynamicImg from "../assets/images/Picture1.jpg";
-import DynamicImg2 from "../assets/images/Picture2.jpg";
-import DynamicImg3 from "../assets/images/Picture3.jpg";
+import DynamicImg2 from "../assets/images/cyclic-load-test.jpeg";
+// import DynamicImg3 from "../assets/images/Picture3.jpg";
+import Noimage from "../assets/images/image.png";
 import PITImg from "../assets/images/Picture5.jpg";
 import StaticImg from "../assets/images/Picture6.jpg";
 import StaticImg2 from "../assets/images/Picture10.jpg";
 import LateralImg from "../assets/images/Picture13.jpg";
-import RockAnchorImg from "../assets/images/Picture20.jpg";
+import RockAnchorImg from "../assets/images/Rock-Anchors-&-Soil-Nailing.jpeg";
 import ProjectImg1 from "../assets/images/Picture16.jpg";
 import ProjectImg2 from "../assets/images/Picture17.jpg";
 import ProjectImg3 from "../assets/images/Picture18.jpg";
 import ProjectImg4 from "../assets/images/Picture19.jpg";
 import ProjectImg5 from "../assets/images/Picture21.jpg";
 import ProjectImg6 from "../assets/images/Picture22.jpg";
-import StoneColumnImg from "../assets/images/Picture24.jpg";
+import StoneColumnImg from "../assets/images/Plate-load-test.jpeg";
 import PLTImg from "../assets/images/Picture27.jpg";
-import GroupImg1 from "../assets/images/Picture28.jpeg";
-import GroupImg2 from "../assets/images/Picture29.jpeg";
+import GroupImg1 from "../assets/images/Himanshu.jpeg";
+import GroupImg2 from "../assets/images/Raj.jpeg";
+import GroupImg3 from "../assets/images/Mangesh.jpeg";
+import GroupImg4 from "../assets/images/Pankaj.jpeg";
+import GroupImg from "../assets/images/Picture29.jpeg";
 
 export const services = [
   {
@@ -101,7 +105,7 @@ export const services = [
     description:
       "Uses ultrasonic pulse transmission between access tubes to evaluate the homogeneity and quality of cast-in-situ concrete piles. Effective for locating defects and weak zones.",
     icon: "radio",
-    image: DynamicImg3,
+    image: Noimage,
     features: [
       "Concrete quality assessment",
       "Defect zone identification",
@@ -116,7 +120,7 @@ export const services = [
     description:
       "An in-situ field test conducted to determine the bearing capacity and settlement characteristics of soil at foundation level as per IS 1888. Useful for shallow foundation and pavement design.",
     icon: "gauge",
-    image: PLTImg,
+    image: StoneColumnImg,
     features: [
       "As per IS 1888",
       "Bearing capacity evaluation",
@@ -131,7 +135,7 @@ export const services = [
     description:
       "Field load test conducted to evaluate the load carrying capacity, stiffness, and settlement behavior of stone columns / granular piles used in ground improvement works.",
     icon: "gauge",
-    image: StoneColumnImg,
+    image: PLTImg,
     features: [
       "Ground improvement verification",
       "Settlement performance",
@@ -292,7 +296,7 @@ export const teamMembers = [
     expertise: ["Foundation Design", "RCC Structures", "Project Management"],
     description:
       "Expert in designing and installation of all types of foundations and RCC structures with extensive experience in geotechnical and infrastructure execution.",
-    image: GroupImg1
+    image: GroupImg
   },
   {
     id: 2,
@@ -303,7 +307,7 @@ export const teamMembers = [
     expertise: ["Piling Works", "Quality Control", "Team Leadership"],
     description:
       "Specialist in piling division with a strong focus on quality, field execution, and efficient project delivery across infrastructure works.",
-    image: GroupImg2
+    image: GroupImg1
   },
   {
     id: 3,
@@ -314,7 +318,7 @@ export const teamMembers = [
     expertise: ["Instrumentation", "NDT Testing", "Testing Systems"],
     description:
       "Experienced in instrumentation, testing systems, and technical implementation of advanced non-destructive and load testing methods.",
-    image: GroupImg1
+    image: GroupImg
   },
   {
     id: 4,
@@ -337,7 +341,7 @@ export const teamMembers = [
     expertise: ["Pile Testing", "Field Execution", "Instrumentation"],
     description:
       "Supports pile testing execution, on-site measurements, equipment handling, and field coordination for foundation testing activities.",
-    image: GroupImg1
+    image: GroupImg3
   },
   {
     id: 6,
@@ -348,7 +352,7 @@ export const teamMembers = [
     expertise: ["Administration", "Accounts", "Operations Support"],
     description:
       "Manages administrative coordination, financial records, and office operations to ensure smooth project and organizational support.",
-    image: GroupImg2
+    image: GroupImg4
   }
 ];
 
