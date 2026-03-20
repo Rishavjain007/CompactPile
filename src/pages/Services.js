@@ -28,9 +28,9 @@ import DynamicImg from "../assets/images/Picture1.jpg";
 import PITImg from "../assets/images/Picture5.jpg";
 import StaticImg from "../assets/images/Picture6.jpg";
 import LateralImg from "../assets/images/Picture13.jpg";
-import RockAnchorImg from "../assets/images/Picture20.jpg";
+import RockAnchorImg from "../assets/images/Rock-Anchors-&-Soil-Nailing.jpeg";
 import StoneColumnImg from "../assets/images/Picture24.jpg";
-import PLTImg from "../assets/images/Picture27.jpg";
+import PLTImg from "../assets/images/Plate-load-test.jpeg";
 
 const iconMap = {
   gauge: Gauge,
@@ -266,7 +266,7 @@ const Services = () => {
               value="load-tests"
               className="border border-gray-200 dark:border-gray-800 rounded-2xl px-6 bg-white dark:bg-gray-900 shadow-sm"
             >
-              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5">
+              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5 text-gray-900 dark:text-white">
                 Load Testing Services
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
@@ -329,7 +329,7 @@ const Services = () => {
               value="ndt"
               className="border border-gray-200 dark:border-gray-800 rounded-2xl px-6 bg-white dark:bg-gray-900 shadow-sm"
             >
-              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5">
+              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5 text-gray-900 dark:text-white">
                 Non-Destructive Testing (NDT)
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
@@ -369,7 +369,7 @@ const Services = () => {
               value="construction"
               className="border border-gray-200 dark:border-gray-800 rounded-2xl px-6 bg-white dark:bg-gray-900 shadow-sm"
             >
-              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5">
+              <AccordionTrigger className="text-xl font-semibold hover:no-underline py-5 text-gray-900 dark:text-white">
                 Construction & Ground Engineering
               </AccordionTrigger>
               <AccordionContent className="pt-2 pb-6 space-y-5">
