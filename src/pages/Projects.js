@@ -139,7 +139,7 @@ const Projects = () => {
                     <div className="absolute top-4 left-4">
                       <Badge
                         variant="outline"
-                        className="bg-white/90 text-gray-700 border-0"
+                        className="mb-4 bg-[#BA0014]/10 text-[#BA0014] dark:bg-[#BA0014]/20 dark:text-red-200"
                       >
                         {project.status}
                       </Badge>
