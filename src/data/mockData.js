@@ -5,7 +5,7 @@ import DynamicImg2 from "../assets/images/cyclic-load-test.jpeg";
 import Noimage from "../assets/images/image.png";
 import PITImg from "../assets/images/Picture5.jpg";
 import StaticImg from "../assets/images/Picture6.jpg";
-import StaticImg2 from "../assets/images/Picture10.jpg";
+import StaticImg2 from "../assets/images/piling-work.jpeg";
 import LateralImg from "../assets/images/Picture13.jpg";
 import RockAnchorImg from "../assets/images/Rock-Anchors-&-Soil-Nailing.jpeg";
 import ProjectImg1 from "../assets/images/Picture16.jpg";
@@ -17,10 +17,11 @@ import ProjectImg6 from "../assets/images/Picture22.jpg";
 import StoneColumnImg from "../assets/images/Plate-load-test.jpeg";
 import PLTImg from "../assets/images/Picture27.jpg";
 import GroupImg1 from "../assets/images/Himanshu.jpeg";
+import GroupImg5 from "../assets/images/Sumer-chand-jain.jpeg";
+import GroupImg6 from "../assets/images/gyan-chand-jain.jpeg";
 import GroupImg2 from "../assets/images/Raj.jpeg";
 import GroupImg3 from "../assets/images/Mangesh.jpeg";
 import GroupImg4 from "../assets/images/Pankaj.jpeg";
-import GroupImg from "../assets/images/Picture29.jpeg";
 
 export const services = [
   {
@@ -296,7 +297,7 @@ export const teamMembers = [
     expertise: ["Foundation Design", "RCC Structures", "Project Management"],
     description:
       "Expert in designing and installation of all types of foundations and RCC structures with extensive experience in geotechnical and infrastructure execution.",
-    image: GroupImg
+    image: GroupImg6
   },
   {
     id: 2,
@@ -318,7 +319,7 @@ export const teamMembers = [
     expertise: ["Instrumentation", "NDT Testing", "Testing Systems"],
     description:
       "Experienced in instrumentation, testing systems, and technical implementation of advanced non-destructive and load testing methods.",
-    image: GroupImg
+    image: GroupImg5
   },
   {
     id: 4,

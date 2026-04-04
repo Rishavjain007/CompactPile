@@ -12,6 +12,7 @@ import {
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
+import Hero from "../assets/images/hero.jpeg"
 import { services, projects, testimonials, stats } from '../data/mockData';
 
 // ===== LOCAL IMAGES =====
@@ -29,7 +30,7 @@ const Home = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1541888946425-d81bb19240f5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxjaXZpbCUyMGVuZ2luZWVyaW5nfGVufDB8fHx8MTc3Mzg5MzgxOXww&ixlib=rb-4.1.0&q=85)',
+              `url(${Hero})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
