@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Mail,
   Phone,
@@ -7,36 +7,36 @@ import {
   MessageCircle,
   ArrowRight,
   Building2,
-  ShieldCheck
-} from 'lucide-react';
-import { Card } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
+  ShieldCheck,
+} from "lucide-react";
+import { Card } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue
-} from '../components/ui/select';
-import { useToast } from '../hooks/use-toast';
+  SelectValue,
+} from "../components/ui/select";
+import { useToast } from "../hooks/use-toast";
 
 // ===== LOCAL HERO IMAGE =====
-import HeroImg from '../assets/images/Picture1.jpg';
+import HeroImg from "../assets/images/Picture1.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    location: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    location: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,24 +46,25 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const message = formatWhatsAppMessage(formData);
-    const whatsappNumber = '916376715272'; // country code +91
+    const whatsappNumber = "916376715272"; // country code +91
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, "_blank");
 
     toast({
-      title: 'Quote Request Sent!',
-      description: 'Your inquiry has been shared on WhatsApp. Our team will contact you shortly.'
+      title: "Quote Request Sent!",
+      description:
+        "Your inquiry has been shared on WhatsApp. Our team will contact you shortly.",
     });
 
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      location: '',
-      message: ''
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      service: "",
+      location: "",
+      message: "",
     });
 
     setIsSubmitting(false);
@@ -71,17 +72,17 @@ const Contact = () => {
 
   const formatWhatsAppMessage = (data) => {
     const serviceMap = {
-      'static-load': 'Static Vertical Load Test',
-      'lateral-load': 'Lateral Load Test',
-      'cyclic-load': 'Cyclic Load Test',
-      'hsdpt': 'High Strain Dynamic Test (HSDPT)',
-      'pit': 'Low Strain Integrity Test (PIT)',
-      'chsl': 'Cross-Hole Sonic Logging (CHSL)',
-      'plt': 'Plate Load Test (PLT)',
-      'stone-column': 'Stone Column Load Test',
-      'piling': 'Piling Works',
-      'rock-anchor': 'Rock Anchors / Soil Nailing',
-      'other': 'Other Services'
+      "static-load": "Static Vertical Load Test",
+      "lateral-load": "Lateral Load Test",
+      "cyclic-load": "Cyclic Load Test",
+      hsdpt: "High Strain Dynamic Test (HSDPT)",
+      pit: "Low Strain Integrity Test (PIT)",
+      chsl: "Cross-Hole Sonic Logging (CHSL)",
+      plt: "Plate Load Test (PLT)",
+      "stone-column": "Stone Column Load Test",
+      piling: "Piling Works",
+      "rock-anchor": "Rock Anchors / Soil Nailing",
+      other: "Other Services",
     };
 
     const serviceName = serviceMap[data.service] || data.service;
@@ -92,17 +93,17 @@ const Contact = () => {
 *Name:* ${data.name}
 *Email:* ${data.email}
 *Phone:* ${data.phone}
-*Company:* ${data.company || 'Not provided'}
+*Company:* ${data.company || "Not provided"}
 
 *🏗️ Project Requirement*
 *Service Required:* ${serviceName}
 *Project Location:* ${data.location}
 
 *📝 Project Details*
-${data.message || 'No additional project details provided'}
+${data.message || "No additional project details provided"}
 
-*⏰ Submitted On:* ${new Date().toLocaleString('en-IN', {
-      timeZone: 'Asia/Kolkata'
+*⏰ Submitted On:* ${new Date().toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
     })}
 *🌐 Source:* Website Contact Form
 
@@ -116,32 +117,32 @@ Please connect with the client at the earliest.`;
 
   const offices = [
     {
-      title: 'Head Office',
-      address: '2nd Floor, D-17, Lajpat Nagar III',
-      city: 'New Delhi – 110024',
-      phone: '+91 9810208189',
-      email: 'compactpile@yahoo.co.in',
+      title: "Head Office",
+      address: "2nd Floor, D-17, Lajpat Nagar III",
+      city: "New Delhi – 110024",
+      phone: "+91 9810208189",
+      email: "compactpile@yahoo.co.in",
       mapLink:
-        'https://www.google.com/maps/search/?api=1&query=2nd+Floor,+D-17,+Lajpat+Nagar+III,+New+Delhi+110024'
+        "https://www.google.com/maps/search/?api=1&query=2nd+Floor,+D-17,+Lajpat+Nagar+III,+New+Delhi+110024",
     },
     {
-      title: 'Registered Office',
-      address: 'A-0/34, S.S.G.T. Road',
-      city: 'Ghaziabad (U.P.) – 201001',
-      phone: '011-41716543',
-      email: 'compactpile@yahoo.co.in',
+      title: "Registered Office",
+      address: "A-0/34, S.S.G.T. Road",
+      city: "Ghaziabad (U.P.) – 201001",
+      phone: "011-41716543",
+      email: "compactpile@yahoo.co.in",
       mapLink:
-        'https://www.google.com/maps/search/?api=1&query=A-0/34,+S.S.G.T.+Road,+Ghaziabad,+U.P.+201001'
+        "https://www.google.com/maps/search/?api=1&query=A-0/34,+S.S.G.T.+Road,+Ghaziabad,+U.P.+201001",
     },
     {
-      title: 'Regional Office',
-      address: '117, Neppalli Village, Kankipadu Mandal',
-      city: 'Krishna, Andhra Pradesh – 521245',
-      phone: '+91 9810040857',
-      email: 'compactpile@yahoo.co.in',
+      title: "Regional Office",
+      address: "117, Neppalli Village, Kankipadu Mandal",
+      city: "Krishna, Andhra Pradesh – 521245",
+      phone: "+91 9810040857",
+      email: "compactpile@yahoo.co.in",
       mapLink:
-        'https://www.google.com/maps/search/?api=1&query=117,+Neppalli+Village,+Kankipadu+Mandal,+Krishna,+Andhra+Pradesh+521245'
-    }
+        "https://www.google.com/maps/search/?api=1&query=117,+Neppalli+Village,+Kankipadu+Mandal,+Krishna,+Andhra+Pradesh+521245",
+    },
   ];
 
   return (
@@ -165,8 +166,8 @@ Please connect with the client at the earliest.`;
           </h1>
 
           <p className="text-lg md:text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
-            Connect with us for pile testing, NDT, plate load testing, stone column testing,
-            and dependable geotechnical support solutions.
+            Connect with us for pile testing, NDT, plate load testing, stone
+            column testing, and dependable geotechnical support solutions.
           </p>
         </div>
       </section>
@@ -186,8 +187,8 @@ Please connect with the client at the earliest.`;
               </h2>
 
               <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-                Fill in your details and our team will connect with you for the right testing
-                and engineering support.
+                Fill in your details and our team will connect with you for the
+                right testing and engineering support.
               </p>
 
               <Card className="p-8 rounded-3xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 shadow-sm">
@@ -200,7 +201,7 @@ Please connect with the client at the earliest.`;
                       <Input
                         required
                         value={formData.name}
-                        onChange={(e) => handleChange('name', e.target.value)}
+                        onChange={(e) => handleChange("name", e.target.value)}
                         placeholder="Your full name"
                       />
                     </div>
@@ -213,7 +214,7 @@ Please connect with the client at the earliest.`;
                         required
                         type="email"
                         value={formData.email}
-                        onChange={(e) => handleChange('email', e.target.value)}
+                        onChange={(e) => handleChange("email", e.target.value)}
                         placeholder="yourmail@example.com"
                       />
                     </div>
@@ -228,7 +229,7 @@ Please connect with the client at the earliest.`;
                         required
                         type="tel"
                         value={formData.phone}
-                        onChange={(e) => handleChange('phone', e.target.value)}
+                        onChange={(e) => handleChange("phone", e.target.value)}
                         placeholder="+91 9876543210"
                       />
                     </div>
@@ -239,7 +240,9 @@ Please connect with the client at the earliest.`;
                       </label>
                       <Input
                         value={formData.company}
-                        onChange={(e) => handleChange('company', e.target.value)}
+                        onChange={(e) =>
+                          handleChange("company", e.target.value)
+                        }
                         placeholder="Company / Organization"
                       />
                     </div>
@@ -252,7 +255,7 @@ Please connect with the client at the earliest.`;
 
                     <Select
                       value={formData.service}
-                      onValueChange={(value) => handleChange('service', value)}
+                      onValueChange={(value) => handleChange("service", value)}
                       required
                     >
                       <SelectTrigger className="w-full">
@@ -260,16 +263,34 @@ Please connect with the client at the earliest.`;
                       </SelectTrigger>
 
                       <SelectContent>
-                        <SelectItem value="static-load">Static Vertical Load Test</SelectItem>
-                        <SelectItem value="lateral-load">Lateral Load Test</SelectItem>
-                        <SelectItem value="cyclic-load">Cyclic Load Test</SelectItem>
-                        <SelectItem value="hsdpt">High Strain Dynamic Test (HSDPT)</SelectItem>
-                        <SelectItem value="pit">Low Strain Integrity Test (PIT)</SelectItem>
-                        <SelectItem value="chsl">Cross-Hole Sonic Logging (CHSL)</SelectItem>
-                        <SelectItem value="plt">Plate Load Test (PLT)</SelectItem>
-                        <SelectItem value="stone-column">Stone Column Load Test</SelectItem>
+                        <SelectItem value="static-load">
+                          Static Vertical Load Test
+                        </SelectItem>
+                        <SelectItem value="lateral-load">
+                          Lateral Load Test
+                        </SelectItem>
+                        <SelectItem value="cyclic-load">
+                          Cyclic Load Test
+                        </SelectItem>
+                        <SelectItem value="hsdpt">
+                          High Strain Dynamic Test (HSDPT)
+                        </SelectItem>
+                        <SelectItem value="pit">
+                          Low Strain Integrity Test (PIT)
+                        </SelectItem>
+                        <SelectItem value="chsl">
+                          Cross-Hole Sonic Logging (CHSL)
+                        </SelectItem>
+                        <SelectItem value="plt">
+                          Plate Load Test (PLT)
+                        </SelectItem>
+                        <SelectItem value="stone-column">
+                          Stone Column Load Test
+                        </SelectItem>
                         <SelectItem value="piling">Piling Works</SelectItem>
-                        <SelectItem value="rock-anchor">Rock Anchors / Soil Nailing</SelectItem>
+                        <SelectItem value="rock-anchor">
+                          Rock Anchors / Soil Nailing
+                        </SelectItem>
                         <SelectItem value="other">Other Services</SelectItem>
                       </SelectContent>
                     </Select>
@@ -282,7 +303,7 @@ Please connect with the client at the earliest.`;
                     <Input
                       required
                       value={formData.location}
-                      onChange={(e) => handleChange('location', e.target.value)}
+                      onChange={(e) => handleChange("location", e.target.value)}
                       placeholder="City, State"
                     />
                   </div>
@@ -293,7 +314,7 @@ Please connect with the client at the earliest.`;
                     </label>
                     <Textarea
                       value={formData.message}
-                      onChange={(e) => handleChange('message', e.target.value)}
+                      onChange={(e) => handleChange("message", e.target.value)}
                       placeholder="Tell us about your project, site condition, testing requirement, quantity, timeline, or any specific need..."
                       rows={6}
                     />
@@ -338,7 +359,8 @@ Please connect with the client at the earliest.`;
                   </Button>
 
                   <p className="text-xs text-center text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
-                    Your enquiry will be shared with our team through WhatsApp for a quicker response.
+                    Your enquiry will be shared with our team through WhatsApp
+                    for a quicker response.
                   </p>
                 </form>
               </Card>
@@ -388,7 +410,7 @@ Please connect with the client at the earliest.`;
                       <div className="flex items-center space-x-3">
                         <Phone className="h-5 w-5 text-[#BA0014] flex-shrink-0" />
                         <a
-                          href={`tel:${office.phone.replace(/\s+/g, '')}`}
+                          href={`tel:${office.phone.replace(/\s+/g, "")}`}
                           className="text-gray-600 dark:text-gray-400 hover:text-[#BA0014] transition-colors"
                         >
                           {office.phone}
@@ -448,7 +470,7 @@ Please connect with the client at the earliest.`;
                   </p>
 
                   <a
-                    href="https://wa.me/916376715272"
+                    href="https://wa.me/919810040857"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center space-x-2 bg-green-600 text-white px-5 py-3 rounded-xl hover:bg-green-700 transition-colors font-medium"
@@ -468,8 +490,9 @@ Please connect with the client at the earliest.`;
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Our team supports projects across India with dependable testing,
-                    technical guidance, and timely project coordination.
+                    Our team supports projects across India with dependable
+                    testing, technical guidance, and timely project
+                    coordination.
                   </p>
                 </Card>
               </div>
@@ -489,24 +512,25 @@ Please connect with the client at the earliest.`;
               Serving Projects Across India
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              We support infrastructure and foundation testing projects across multiple states and sectors.
+              We support infrastructure and foundation testing projects across
+              multiple states and sectors.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                title: 'North India',
-                desc: 'Delhi NCR, Uttar Pradesh, Haryana, Rajasthan, Punjab and nearby regions'
+                title: "North India",
+                desc: "Delhi NCR, Uttar Pradesh, Haryana, Rajasthan, Punjab and nearby regions",
               },
               {
-                title: 'Central & East India',
-                desc: 'Madhya Pradesh, Bihar, Jharkhand, Chhattisgarh, West Bengal and adjoining states'
+                title: "Central & East India",
+                desc: "Madhya Pradesh, Bihar, Jharkhand, Chhattisgarh, West Bengal and adjoining states",
               },
               {
-                title: 'South & West India',
-                desc: 'Maharashtra, Gujarat, Andhra Pradesh, Karnataka, Tamil Nadu and surrounding areas'
-              }
+                title: "South & West India",
+                desc: "Maharashtra, Gujarat, Andhra Pradesh, Karnataka, Tamil Nadu and surrounding areas",
+              },
             ].map((region, index) => (
               <Card
                 key={index}
@@ -533,7 +557,8 @@ Please connect with the client at the earliest.`;
           </h2>
 
           <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
-            Call our team directly for urgent project discussions and quick support.
+            Call our team directly for urgent project discussions and quick
+            support.
           </p>
 
           <a
