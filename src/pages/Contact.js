@@ -46,7 +46,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     const message = formatWhatsAppMessage(formData);
-    const whatsappNumber = "916376715272"; // country code +91
+    const whatsappNumber = "919810040857"; // country code +91
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappUrl, "_blank");
